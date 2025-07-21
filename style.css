@@ -19,7 +19,7 @@ body {
 .invitation-card {
     background: white;
     width: 400px;
-    height: 800px;
+    height: 600px;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     position: relative;
@@ -265,4 +265,222 @@ body {
     border-top: 6px solid #ffd93d;
     top: 6px;
     left: -4px;
+}
+
+/* Responsive Design for Mobile Devices (5-7 inch screens) */
+@media screen and (max-width: 450px) {
+    body {
+        padding: 10px;
+    }
+    
+    .invitation-card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 550px;
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+    
+    .photo-frame {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        border-radius: 12px;
+    }
+    
+    .photo-image {
+        border-radius: 9px;
+    }
+    
+    .birthday-title {
+        font-size: 30px;
+        margin-bottom: 3px;
+    }
+    
+    .invitation-text {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .main-text {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .name {
+        font-size: 26px;
+        margin: 8px 0 15px 0;
+    }
+    
+    .venue-title {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    
+    .venue-subtitle {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    
+    .address {
+        font-size: 11px;
+        margin-bottom: 12px;
+        line-height: 1.3;
+    }
+    
+    .datetime {
+        padding: 10px 15px;
+        font-size: 12px;
+        margin-bottom: 12px;
+        border-radius: 20px;
+    }
+    
+    .rsvp {
+        font-size: 12px;
+    }
+    
+    /* Điều chỉnh decorations cho mobile */
+    .flower-top-left {
+        width: 60px;
+        height: 60px;
+        top: -5px;
+        left: -5px;
+    }
+    
+    .flower-top-right {
+        width: 80px;
+        height: 80px;
+        top: 15px;
+        right: -15px;
+    }
+    
+    .flower-bottom-left {
+        width: 70px;
+        height: 70px;
+        bottom: -10px;
+        left: -10px;
+    }
+    
+    .flower-bottom-right {
+        width: 100px;
+        height: 100px;
+        bottom: 25px;
+        right: -25px;
+    }
+    
+    .leaves {
+        top: 40px;
+        left: 10px;
+        width: 25px;
+        height: 12px;
+    }
+    
+    .leaves::after {
+        width: 20px;
+        height: 10px;
+        top: 15px;
+        right: -8px;
+    }
+    
+    .decorative-dots {
+        top: 80px;
+        right: 25px;
+        width: 5px;
+        height: 5px;
+    }
+    
+    .decorative-dots::before {
+        width: 3px;
+        height: 3px;
+        top: -12px;
+        left: 8px;
+    }
+    
+    .decorative-dots::after {
+        width: 6px;
+        height: 6px;
+        top: 12px;
+        left: -6px;
+    }
+    
+    .sparkle {
+        top: 120px;
+        left: 40px;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 5px solid #ffd93d;
+    }
+    
+    .sparkle::after {
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 5px solid #ffd93d;
+        top: 5px;
+        left: -3px;
+    }
+}
+
+/* Responsive cho màn hình nhỏ hơn (5 inch) */
+@media screen and (max-width: 360px) {
+    .invitation-card {
+        max-width: 320px;
+        padding: 20px 15px;
+        min-height: 520px;
+    }
+    
+    .photo-frame {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .birthday-title {
+        font-size: 26px;
+    }
+    
+    .name {
+        font-size: 22px;
+    }
+    
+    .venue-title {
+        font-size: 13px;
+    }
+    
+    .address {
+        font-size: 10px;
+    }
+    
+    .datetime {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+}
+
+/* Responsive cho màn hình lớn hơn (6.5-7 inch) */
+@media screen and (min-width: 400px) and (max-width: 450px) {
+    .invitation-card {
+        max-width: 380px;
+        min-height: 580px;
+    }
+    
+    .photo-frame {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .birthday-title {
+        font-size: 32px;
+    }
+    
+    .name {
+        font-size: 28px;
+    }
+    
+    .venue-title {
+        font-size: 15px;
+    }
+    
+    .datetime {
+        font-size: 13px;
+    }
 }
