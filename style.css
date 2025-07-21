@@ -18,7 +18,7 @@ body {
 
 .invitation-card {
     background: white;
-    width: 600px;
+    width: 400px;
     height: 600px;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
@@ -132,15 +132,11 @@ body {
     overflow: hidden;
 }
 
-.photo-placeholder {
+.photo-image {
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #ff9a8b, #ffeaa7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 500;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
 .birthday-title {
@@ -169,7 +165,7 @@ body {
     font-family: 'Dancing Script', cursive;
     font-size: 32px;
     color: #ff8c42;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 20px 0;
     font-weight: 600;
 }
 
