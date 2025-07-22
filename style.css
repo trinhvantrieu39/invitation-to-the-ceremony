@@ -19,7 +19,7 @@ body {
 .invitation-card {
     background: white;
     width: 400px;
-    height: 800px;
+    min-height: 800px; /* Thay đổi từ height cố định thành min-height */
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     position: relative;
@@ -112,7 +112,8 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    min-height: 740px; /* Đảm bảo content có chiều cao tối thiểu */
 }
 
 .photo-frame {
@@ -267,7 +268,228 @@ body {
     left: -4px;
 }
 
-/* Responsive Design for Mobile Devices (5-7 inch screens) */
+/* Responsive cho Desktop/Laptop (từ 769px trở lên) */
+@media screen and (min-width: 769px) {
+    body {
+        padding: 40px;
+    }
+    
+    .invitation-card {
+        width: 450px;
+        min-height: 850px;
+        padding: 40px 35px;
+        border-radius: 25px;
+    }
+    
+    .content {
+        min-height: 770px;
+    }
+    
+    .photo-frame {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 25px;
+    }
+    
+    .birthday-title {
+        font-size: 42px;
+        margin-bottom: 8px;
+    }
+    
+    .invitation-text {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    
+    .main-text {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .name {
+        font-size: 38px;
+        margin: 15px 0 25px 0;
+    }
+    
+    .venue-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .venue-subtitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .address {
+        font-size: 15px;
+        margin-bottom: 18px;
+        line-height: 1.5;
+    }
+    
+    .datetime {
+        padding: 15px 25px;
+        font-size: 16px;
+        margin-bottom: 18px;
+        border-radius: 30px;
+    }
+    
+    .rsvp {
+        font-size: 16px;
+    }
+    
+    /* Điều chỉnh decorations cho desktop */
+    .flower-top-left {
+        width: 100px;
+        height: 100px;
+        top: -15px;
+        left: -15px;
+    }
+    
+    .flower-top-right {
+        width: 120px;
+        height: 120px;
+        top: 25px;
+        right: -25px;
+    }
+    
+    .flower-bottom-left {
+        width: 110px;
+        height: 110px;
+        bottom: -20px;
+        left: -20px;
+    }
+    
+    .flower-bottom-right {
+        width: 140px;
+        height: 140px;
+        bottom: 40px;
+        right: -35px;
+    }
+    
+    .leaves {
+        top: 60px;
+        left: 20px;
+        width: 35px;
+        height: 18px;
+    }
+    
+    .leaves::after {
+        width: 28px;
+        height: 15px;
+        top: 25px;
+        right: -12px;
+    }
+    
+    .decorative-dots {
+        top: 120px;
+        right: 40px;
+        width: 8px;
+        height: 8px;
+    }
+    
+    .decorative-dots::before {
+        width: 5px;
+        height: 5px;
+        top: -18px;
+        left: 12px;
+    }
+    
+    .decorative-dots::after {
+        width: 10px;
+        height: 10px;
+        top: 18px;
+        left: -10px;
+    }
+    
+    .sparkle {
+        top: 180px;
+        left: 60px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 7px solid #ffd93d;
+    }
+    
+    .sparkle::after {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #ffd93d;
+        top: 7px;
+        left: -5px;
+    }
+}
+
+/* Responsive cho Tablet (451px - 768px) */
+@media screen and (min-width: 451px) and (max-width: 768px) {
+    body {
+        padding: 30px;
+    }
+    
+    .invitation-card {
+        width: 420px;
+        min-height: 820px;
+        padding: 35px 30px;
+        border-radius: 22px;
+    }
+    
+    .content {
+        min-height: 750px;
+    }
+    
+    .photo-frame {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto 22px;
+    }
+    
+    .birthday-title {
+        font-size: 38px;
+        margin-bottom: 6px;
+    }
+    
+    .invitation-text {
+        font-size: 19px;
+        margin-bottom: 16px;
+    }
+    
+    .main-text {
+        font-size: 17px;
+        margin-bottom: 11px;
+    }
+    
+    .name {
+        font-size: 34px;
+        margin: 12px 0 22px 0;
+    }
+    
+    .venue-title {
+        font-size: 17px;
+        margin-bottom: 6px;
+    }
+    
+    .venue-subtitle {
+        font-size: 15px;
+        margin-bottom: 9px;
+    }
+    
+    .address {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    
+    .datetime {
+        padding: 13px 22px;
+        font-size: 15px;
+        margin-bottom: 16px;
+        border-radius: 27px;
+    }
+    
+    .rsvp {
+        font-size: 15px;
+    }
+}
+
+/* Responsive Design cho Mobile (450px trở xuống) */
 @media screen and (max-width: 450px) {
     body {
         padding: 10px;
@@ -276,10 +498,13 @@ body {
     .invitation-card {
         width: 100%;
         max-width: 350px;
-        height: auto;
         min-height: 550px;
         padding: 25px 20px;
         border-radius: 15px;
+    }
+    
+    .content {
+        min-height: 500px;
     }
     
     .photo-frame {
@@ -429,6 +654,10 @@ body {
         min-height: 520px;
     }
     
+    .content {
+        min-height: 480px;
+    }
+    
     .photo-frame {
         width: 90px;
         height: 90px;
@@ -453,34 +682,5 @@ body {
     .datetime {
         font-size: 11px;
         padding: 8px 12px;
-    }
-}
-
-/* Responsive cho màn hình lớn hơn (6.5-7 inch) */
-@media screen and (min-width: 400px) and (max-width: 450px) {
-    .invitation-card {
-        max-width: 380px;
-        min-height: 580px;
-    }
-    
-    .photo-frame {
-        width: 110px;
-        height: 110px;
-    }
-    
-    .birthday-title {
-        font-size: 32px;
-    }
-    
-    .name {
-        font-size: 28px;
-    }
-    
-    .venue-title {
-        font-size: 15px;
-    }
-    
-    .datetime {
-        font-size: 13px;
     }
 }
